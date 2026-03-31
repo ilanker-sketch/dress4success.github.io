@@ -21,9 +21,28 @@
         .stat-number { font-size: 2.5rem; font-weight: bold; color: #1a2a6c; display: block; }
         
         .concept { font-style: italic; color: #555; background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0; border-right: 5px solid #ffc107; }
-        
-        .image-gallery { display: flex; justify-content: space-around; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
-        .image-gallery img { width: 30%; min-width: 250px; border-radius: 5px; filter: grayscale(30%); transition: 0.3s; border: 1px solid #ddd; }
+
+        /* ✅ תיקון כאן */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: nowrap;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            filter: grayscale(30%);
+            transition: 0.3s;
+            border: 1px solid #ddd;
+        }
+
         .image-gallery img:hover { filter: grayscale(0%); transform: scale(1.02); }
 
         footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #888; background: #eee; }
@@ -67,34 +86,9 @@
         <h2>קטלוג השראה: הקוד החדש</h2>
         <p>להלן דוגמאות ללבוש התואם את תקני הפיילוט. שימו לב לשילוב שבין צבעים סולידיים לגזרות מחויטות (Business Professional).</p>
         <div class="image-gallery">
-            .image-gallery { 
-            display: flex; 
-            justify-content: space-between; /* פיזור שווה */
-            gap: 15px; 
-            margin-top: 30px; 
-            flex-wrap: nowrap; /* מונע מהם לרדת שורה */
-        }
-        
-        .image-gallery a { 
-            width: 32%; /* כל קישור יתפוס שליש שורה */
-            display: block; 
-        }
-        
-        .image-gallery img { 
-            width: 100%; /* התמונה תמלא את כל שטח הקישור */
-            height: 250px; /* גובה אחיד לכולן */
-            object-fit: cover; /* חיתוך חכם כדי שלא יתעוותו */
-            border-radius: 5px; 
-            filter: grayscale(30%); 
-            transition: 0.3s; 
-            border: 1px solid #ddd; 
-        }
-        
-        .image-gallery img:hover { 
-            filter: grayscale(0%); 
-            transform: scale(1.02); 
-        }
-
+            <a href="https://ibb.co/7dm1vj8v"><img src="https://i.ibb.co/cSnrJkMJ/pexels-katerina-holmes-5905840.jpg"></a>
+            <a href="https://ibb.co/Q3v2L8YD"><img src="https://i.ibb.co/0RygTBYs/pexels-max-fischer-5212320.jpg"></a>
+            <a href="https://ibb.co/TqdX3560"><img src="https://i.ibb.co/vvR5n8pd/pexels-max-fischer-5212339.jpg"></a>
         </div>
         <p style="text-align: center; margin-top: 20px;">
             <span class="stamp">מאושר פדגוגית - פיילוט 2026-2028</span>
